@@ -17,7 +17,7 @@ app.use(cors({
   }));
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 
 // Middleware
 app.use(express.json()); // To parse JSON bodies
