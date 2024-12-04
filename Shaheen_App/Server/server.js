@@ -11,10 +11,10 @@ const emailRoutes = require('./Routes/emailRoutes');
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Allow your frontend (React app) to access this API
-    methods: ['GET', 'POST',"PATCH", "PUT","DELETE"],       // Specify the allowed HTTP methods
-    credentials: true               // Allow cookies and credentials to be sent with requests
-  }));
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
+  credentials: true,
+}));
 
 
 const PORT = process.env.PORT || 10000;
