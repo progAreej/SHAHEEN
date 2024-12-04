@@ -27,7 +27,7 @@ const SignupPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:10000/api/auth/signup', formData);
+      const response = await axios.post('https://shaheen-r0rh.onrender.com/api/auth/signup', formData);
       navigate('/login'); // Redirect to login after successful signup
     } catch (err) {
       setError(err.response?.data?.error || 'Something went wrong'); // Handle the error gracefully
