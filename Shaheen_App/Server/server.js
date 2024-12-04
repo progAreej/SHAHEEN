@@ -11,7 +11,7 @@ const emailRoutes = require('./Routes/emailRoutes');
 const app = express();
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin:  'http://localhost:5173',
   methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
   credentials: true,
 }));
@@ -30,7 +30,10 @@ connectDB();
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api', contactRoutes);
-
+// Root route
+app.get('/', (req, res) => {
+  res.send('Welcome to the Shaheen API');
+});
 // A protected route example
 app.get('/api/protected', authMiddleware, (req, res) => {
   res.status(200).json({ message: 'You have access to this protected route', user: req.user });
