@@ -6,7 +6,7 @@ import LoginPage from "./Pages/LoginPage";
 import SignupPage from "./Pages/SignupPage";
 import ContactUs from "./Pages/ContactUs";
 import OurStory from "./Pages/OurStory";
-import FAQPage from "./Pages/FAQ.JSX";
+import FAQPage from "./Pages/Faq";
 import FeaturePage from "./Pages/FeaturePage";
 function App() {
   return (
