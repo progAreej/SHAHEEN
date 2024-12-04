@@ -36,7 +36,7 @@ const CallToAction = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:10000/api/email/save-email', {
+      const response = await fetch('https://shaheen-r0rh.onrender.com/api/email/save-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
